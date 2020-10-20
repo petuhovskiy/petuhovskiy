@@ -5,7 +5,7 @@ function get_commit_message {
     if [[ -n "$GITHUB_SHA" ]]; then
         echo $(git log --format=%B -n 1 $GITHUB_SHA)
     else
-        echo "pdf updates"
+        echo "Updatet static content"
     fi
 }
 
