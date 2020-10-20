@@ -1,6 +1,6 @@
 baseURL = "http://arthur.ooo/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Arthur Petukhovsky"
 theme = ["custom-hugo-developer", "hugo-developer-portfolio"]
 
 [params.plugins]
