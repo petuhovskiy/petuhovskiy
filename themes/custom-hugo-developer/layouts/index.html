@@ -59,6 +59,10 @@
         <li><a href="https://www.linkedin.com/in/{{ .Site.Data.homepage.social.linkedin }}">
             <img class="contain" src="https://cdn.svgporn.com/logos/linkedin.svg" alt="LinkedIn" loading="lazy"> </a></li>
         {{ end }}
+        {{ if .Site.Data.homepage.social.ioi }}
+        <li><a href="http://stats.ioinformatics.org/people/{{ .Site.Data.homepage.social.ioi }}">
+            <img class="contain" src="http://ioi2017.org/files/logo/bare/IOI-2017.svg" alt="International Olympiad in Informatics" loading="lazy"> </a></li>
+        {{ end }}
         {{ if .Site.Data.homepage.social.spotify }}
         <li><a href="https://open.spotify.com/user/{{ .Site.Data.homepage.social.spotify }}" > <img
                     class="contain" src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify" loading="lazy"></a></li>
