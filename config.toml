@@ -1,0 +1,56 @@
+baseURL = "http://arthur.ooo/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+theme = ["custom-hugo-developer", "hugo-developer-portfolio"]
+
+[params.plugins]
+  # CSS Plugins
+  [[params.plugins.css]]
+  URL = "https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css"
+  # JS Plugins
+  [[params.plugins.js]]
+  URL = "https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"
+  [[params.plugins.js]]
+  URL = "https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"
+
+
+# navigation
+[menu]
+  [[menu.main]]
+  name = "Nothing"
+  URL = "#"
+  [[menu.main]]
+  name = "N0thing"
+  URL = "#"
+  [[menu.main]]
+  name = "There also"
+  URL = "#"
+#   [[menu.main]]
+#   name = "About"
+#   URL = "about"
+#   [[menu.main]]
+#   name = "Blog"
+#   URL = "blog"
+#   [[menu.main]]
+#   name = "Portfolio"
+#   URL = "portfolio"
+#   [[menu.main]]
+#   name = "Contact"
+#   URL = "contact"
+
+
+[params]
+home = "Home" # What you want the homepage to show up as in the menu bar
+# Meta data
+description = "The website of Arthur Petukhovsky, and nothing more at this time"
+author = "Arthur Petukhovsky"
+
+
+# [params.contact]
+# formAction = "https://formspree.io/<Insert code>" # Add your formspree URL here to get emails
+
+# This contains the contact information for the footer
+[params.footer]
+email = "petuhovskiy@yandex.ru"
+address = "Moscow, Russia"
+# googlemaps = "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJwbHYJaUqfEgRK0Ui9dVGimc&key=AIzaSyAE_4rVAKux_DSPcb_OdSRDaovtPOSk_3U"

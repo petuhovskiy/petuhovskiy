@@ -1,0 +1,58 @@
+banner:
+  title: Arthur's home page
+
+social:
+  telegram: "petuhovskiy"
+  lastfm: "ArthurREW"
+  github: petuhovskiy
+  linkedin: "arthur-petukhovsky-356b50185"
+  spotify: "petuhovskiy"
+  gitlab: "petuhovskiy"
+  gmail: apetuhovskiy
+  facebook: "petuhovskiy"
+  vk: "petuhovskiy"
+  instagram: "petukhovskyarthur"
+  twitter: "petuhovskiy"
+
+about:
+  enable: true
+  content: Yes, that's my social links. And nothing more.
+  button:
+    btnText: Nothing here
+    URL: "#"
+
+# skill:
+#   enable: true
+#   item:
+#     - title: JavaScript
+#       logo: https://res.cloudinary.com/samrobbins/image/upload/v1591793272/logos/logos_javascript_adj1dx.svg
+#       description: Details coming soon, contact me if you want to know more
+
+# portfolio:
+#   enable: true
+#   item:
+#     - title: Easy DMARC
+#       image: https://res.cloudinary.com/samrobbins/image/upload/v1597159067/Easy_DMARC_hkcgif.webp
+#       description: A website to make it easy to add DMARC to a Vercel website
+#       link: "/portfolio/easy-dmarc"
+#       tools:
+#         - next-dot-js
+#         - tailwindcss
+#         - vercel
+#         - react
+
+
+# experience:
+#   enable: true
+#   item:
+#     - logo: https://res.cloudinary.com/samrobbins/image/upload/f_auto,q_auto/v1591793271/logos/logos_google_id6v9a.svg
+#       title: init.g
+#       company: Google
+#       duration: November 2019
+
+# awards:
+#   enable: true
+#   item:
+#     - title: Phase 1 Winner
+#       event: GNOME Community Engagement Challenge
+#       image: https://res.cloudinary.com/samrobbins/image/upload/v1595701167/CEChallenge-P1Winner2_iyjvyu.png
