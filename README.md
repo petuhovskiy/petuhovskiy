@@ -7,6 +7,6 @@ Currently, I'm finishing a Bachelor's degree in Computer Science at Higher Schoo
 
 ## Me on other resources
 - [Telegram](https://t.me/petuhovskiy)
-- [Website](https://arthur.ooo/)
+- [More links](https://arthur.ooo/)
 
 ![](https://komarev.com/ghpvc/?username=petuhovskiy)
