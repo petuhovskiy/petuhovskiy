@@ -34,21 +34,25 @@ genfstab -U /mnt >> /mnt/etc/fstab
 cat /mnt/etc/fstab
 
 ### CHROOT
-arch-chroot /mnt
-ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime
-hwclock --systohc
-locale-gen
-echo "LANG=en_US.UTF-8" > /etc/locale.conf
-echo "ARTHUR-ARCH" > /etc/hostname
+cat > /mnt/post_install.sh <<-END
+    ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime
+    hwclock --systohc
+    locale-gen
+    echo "LANG=en_US.UTF-8" > /etc/locale.conf
+    echo "ARTHUR-ARCH" > /etc/hostname
 
-echo "127.0.0.1 localhost" >> /etc/hosts
-echo "::1" >> /etc/hosts
-echo "127.0.1.1 ARTHUR-ARCH.localdomain ARTHUR-ARCH" >> /etc/hosts
+    echo "127.0.0.1 localhost" >> /etc/hosts
+    echo "::1" >> /etc/hosts
+    echo "127.0.1.1 ARTHUR-ARCH.localdomain ARTHUR-ARCH" >> /etc/hosts
 
-# TODO: network
+    # TODO: network
 
-passwd
+    passwd
 
-# boot loader
-pacman -S refind
-refind-install
+    # boot loader
+    pacman -S refind
+    refind-install
+END
+
+arch-chroot /mnt /bin/bash post_install.sh
+
