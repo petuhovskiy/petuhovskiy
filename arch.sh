@@ -10,10 +10,10 @@ timedatectl status
 # partition disk
 fdisk -l
 
-parted /dev/sda mklabel gpt
-parted /dev/sda mkpart "EFI system partition" fat32 1MiB 261MiB
-parted /dev/sda set 1 esp on
-parted /dev/sda mkpart "drive" ext4 261MiB 100%
+parted /dev/sda 'mklabel gpt'
+parted /dev/sda 'mkpart "EFI system partition" fat32 1MiB 261MiB'
+parted /dev/sda 'set 1 esp on'
+parted /dev/sda 'mkpart "drive" ext4 261MiB 100%'
 
 # check if everything ok
 fdisk -l
