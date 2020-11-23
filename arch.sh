@@ -1,3 +1,4 @@
+#!/bin/bash
 set -e
 
 # check efi mode
@@ -8,12 +9,16 @@ timedatectl set-ntp true
 timedatectl status
 
 # partition disk
+echo 'Disk before:'
 fdisk -l
 
 parted /dev/sda 'mklabel gpt'
+echo 'Formatted disk:'
+fdisk -l
+
 parted /dev/sda 'mkpart "EFI system partition" fat32 1MiB 261MiB'
 parted /dev/sda 'set 1 esp on'
-parted /dev/sda 'mkpart "drive" ext4 261MiB 100%'
+parted /dev/sda 'mkpart "dniwe" ext4 261MiB 100%'
 
 # check if everything ok
 fdisk -l
@@ -28,9 +33,10 @@ mkdir /mnt/efi
 mount /dev/sda1 /mnt/efi
 
 # install
-pacstrap /mnt base linux linux-firmware
+pacstrap /mnt base linux linux-firmware vim nano zsh
 
 genfstab -U /mnt >> /mnt/etc/fstab
+echo '/mnt/etc/fstab::'
 cat /mnt/etc/fstab
 
 ### CHROOT
@@ -45,6 +51,9 @@ cat > /mnt/post_install.sh <<-END
     echo "::1" >> /etc/hosts
     echo "127.0.1.1 ARTHUR-ARCH.localdomain ARTHUR-ARCH" >> /etc/hosts
 
+		echo '/etc/hosts::'
+		cat /eth/hosts
+
     # TODO: network
 
     passwd
@@ -55,4 +64,3 @@ cat > /mnt/post_install.sh <<-END
 END
 
 arch-chroot /mnt /bin/bash post_install.sh
-
