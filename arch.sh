@@ -52,15 +52,17 @@ cat > /mnt/post_install.sh <<-END
     echo "127.0.1.1 ARTHUR-ARCH.localdomain ARTHUR-ARCH" >> /etc/hosts
 
 		echo '/etc/hosts::'
-		cat /eth/hosts
+		cat /etc/hosts
 
     # TODO: network
 
     passwd
 
     # boot loader
-    pacman -S refind
-    refind-install
+    pacman -S refind grub efibootmgr
+    grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/efi
+    grub-mkconfig -o /boot/grub/grub.cfg
+    # refind-install
 END
 
 arch-chroot /mnt /bin/bash post_install.sh
