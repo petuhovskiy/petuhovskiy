@@ -16,9 +16,9 @@ parted /dev/sda 'mklabel gpt'
 echo 'Formatted disk:'
 fdisk -l
 
-parted /dev/sda 'mkpart "EFI system partition" fat32 1MiB 261MiB'
+parted /dev/sda 'mkpart "EFI system partition" fat32 1MiB 517MiB'
 parted /dev/sda 'set 1 esp on'
-parted /dev/sda 'mkpart "dniwe" ext4 261MiB 100%'
+parted /dev/sda 'mkpart "dniwe" ext4 517MiB 100%'
 
 # check if everything ok
 fdisk -l
@@ -59,7 +59,7 @@ cat > /mnt/post_install.sh <<-END
     passwd
 
     # network
-    pamcan -S networkmanager
+    pacman -S networkmanager
     systemctl enable NetworkManager.service
 
     # gui
@@ -76,4 +76,4 @@ END
 arch-chroot /mnt /bin/bash post_install.sh
 
 
-shutdown now
+reboot
