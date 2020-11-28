@@ -29,8 +29,8 @@ mkfs.ext4 /dev/sda2
 
 # mount
 mount /dev/sda2 /mnt
-mkdir /mnt/efi
-mount /dev/sda1 /mnt/efi
+mkdir /mnt/boot
+mount /dev/sda1 /mnt/boot
 
 # install
 pacstrap /mnt base linux linux-firmware vim nano zsh
@@ -68,7 +68,7 @@ cat > /mnt/post_install.sh <<-END
 
     # boot loader
     pacman -S refind grub efibootmgr
-    grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/efi
+    grub-install /dev/sda --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot
     grub-mkconfig -o /boot/grub/grub.cfg
     # refind-install
 END
@@ -76,4 +76,4 @@ END
 arch-chroot /mnt /bin/bash post_install.sh
 
 
-# shutdown now
+shutdown now
