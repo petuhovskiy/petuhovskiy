@@ -63,8 +63,8 @@ cat > /mnt/post_install.sh <<-END
     systemctl enable NetworkManager.service
 
     # gui
-    # pacman -S xorg gnome gdm
-    # systemctl enable gdm.service
+    pacman -S xorg gnome gdm
+    systemctl enable gdm.service
 
     # boot loader
     pacman -S refind grub efibootmgr
