@@ -58,6 +58,14 @@ cat > /mnt/post_install.sh <<-END
 
     passwd
 
+    # network
+    pamcan -S networkmanager
+    systemctl enable NetworkManager.service
+
+    # gui
+    pacman -S xorg gnome gdm
+    systemctl enable gdm.service
+
     # boot loader
     pacman -S refind grub efibootmgr
     grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/efi
@@ -66,3 +74,6 @@ cat > /mnt/post_install.sh <<-END
 END
 
 arch-chroot /mnt /bin/bash post_install.sh
+
+
+shutdown now
