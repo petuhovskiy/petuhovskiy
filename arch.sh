@@ -63,7 +63,7 @@ cat > /mnt/post_install.sh <<-END
     systemctl enable NetworkManager.service
 
     # gui
-    pacman -S xorg gnome gdm
+    pacman -S xorg gnome gdm terminator
     systemctl enable gdm.service
 
     # boot loader
@@ -71,6 +71,12 @@ cat > /mnt/post_install.sh <<-END
     grub-install /dev/sda --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot
     grub-mkconfig -o /boot/grub/grub.cfg
     # refind-install
+
+    pacman -S virtualbox-guest-utils
+    systemctl enable vboxservice.service
+
+    pacman -S docker
+    systemctl enable docker.service
 END
 
 arch-chroot /mnt /bin/bash post_install.sh
