@@ -41,56 +41,12 @@
         {{ end }}
         {{ end }}
 
-        <!-- https://open.spotify.com/user/petuhovskiy -->
+        {{ range .Site.Data.homepage.social }}
+            <li><a href="{{ .link }}" > <img
+                    class="contain" src="{{ .icon }}" alt="{{ .name }}" loading="lazy"></a></li>
+        {{ end }}
 
-        {{ if .Site.Data.homepage.social.telegram }}
-        <li><a href="https://t.me/{{ .Site.Data.homepage.social.telegram }}" > <img
-                    class="contain" src="https://cdn.svgporn.com/logos/telegram.svg" alt="Telegram" loading="lazy"></a></li>
-        {{ end }}
-        {{ if .Site.Data.homepage.social.lastfm }}
-        <li><a href="https://www.last.fm/user/{{ .Site.Data.homepage.social.lastfm }}"> <img
-                    class="contain" src="https://cdn.svgporn.com/logos/lastfm.svg" alt="LastFM" loading="lazy"> </a></li>
-        {{ end }}
-        {{ if .Site.Data.homepage.social.github }}
-        <li><a href="https://github.com/{{ .Site.Data.homepage.social.github }}"> <img
-                    class="contain" src="https://cdn.svgporn.com/logos/github-icon.svg" alt="GitHub" loading="lazy"> </a></li>
-        {{ end }}
-        {{ if .Site.Data.homepage.social.linkedin }}
-        <li><a href="https://www.linkedin.com/in/{{ .Site.Data.homepage.social.linkedin }}">
-            <img class="contain" src="https://cdn.svgporn.com/logos/linkedin.svg" alt="LinkedIn" loading="lazy"> </a></li>
-        {{ end }}
-        {{ if .Site.Data.homepage.social.ioi }}
-        <li><a href="http://stats.ioinformatics.org/people/{{ .Site.Data.homepage.social.ioi }}">
-            <img class="contain" src="http://ioi2017.org/files/logo/bare/IOI-2017.svg" alt="International Olympiad in Informatics" loading="lazy"> </a></li>
-        {{ end }}
-        {{ if .Site.Data.homepage.social.spotify }}
-        <li><a href="https://open.spotify.com/user/{{ .Site.Data.homepage.social.spotify }}" > <img
-                    class="contain" src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify" loading="lazy"></a></li>
-        {{ end }}
-        {{ if .Site.Data.homepage.social.gitlab }}
-        <li><a href="https://gitlab.com/{{ .Site.Data.homepage.social.gitlab }}"> <img
-                    class="contain" src="https://cdn.svgporn.com/logos/gitlab.svg" alt="GitLab" loading="lazy"></a></li>
-        {{ end }}
-        {{ if .Site.Data.homepage.social.gmail }}
-        <li><a href="mailto:{{ .Site.Data.homepage.social.gmail }}@gmail.com" > <img
-                    class="contain" src="https://cdn.svgporn.com/logos/google-gmail.svg" alt="Gmail" loading="lazy"></a></li>
-        {{ end }}
-        {{ if .Site.Data.homepage.social.facebook }}
-        <li><a href="https://www.facebook.com/{{ .Site.Data.homepage.social.facebook }}"> <img
-                    class="contain" src="https://cdn.svgporn.com/logos/facebook.svg" alt="Facebook" loading="lazy"></a></li>
-        {{ end }}
-        {{ if .Site.Data.homepage.social.vk }}
-        <li><a href="https://vk.com/{{ .Site.Data.homepage.social.vk }}" > <img
-                    class="contain" src="https://brand.vkforms.ru/static/media/logo_color_154.08f6e176.svg" alt="VK" loading="lazy"></a></li>
-        {{ end }}
-        {{ if .Site.Data.homepage.social.instagram }}
-        <li><a href="https://instagram.com/{{ .Site.Data.homepage.social.instagram }}"> <img
-                    class="contain" src="https://cdn.svgporn.com/logos/instagram-icon.svg" alt="Instagram" loading="lazy"></a></li>
-        {{ end }}
-        {{ if .Site.Data.homepage.social.twitter }}
-        <li><a href="https://twitter.com/{{ .Site.Data.homepage.social.twitter }}" > <img
-                    class="contain" src="https://cdn.svgporn.com/logos/twitter.svg" alt="Twitter" loading="lazy"></a></li>
-        {{ end }}
+    
     </ul>
 
 

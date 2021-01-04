@@ -2,20 +2,95 @@ banner:
   title: Arthur's home page
 
 social:
-  telegram: "petuhovskiy"
-  lastfm: "ArthurREW"
-  github: petuhovskiy
-  linkedin: "arthur-petukhovsky-356b50185"
-  ioi: "5859"
+  - link: "https://t.me/petuhovskiy"
+    icon: "https://cdn.svgporn.com/logos/telegram.svg"
+    name: "Telegram"
+
+  - link: "https://www.last.fm/user/ArthurREW"
+    icon: "https://cdn.svgporn.com/logos/lastfm.svg"
+    name: "LastFM"
+
+  - link: "https://github.com/petuhovskiy"
+    icon: "https://cdn.svgporn.com/logos/github-icon.svg"
+    name: "GitHub"
+
+  - link: "https://www.linkedin.com/in/arthur-petukhovsky-356b50185"
+    icon: "https://cdn.svgporn.com/logos/linkedin.svg"
+    name: "LinkedIn"
+
+  - link: "http://stats.ioinformatics.org/people/5859"
+    icon: "http://ioi2017.org/files/logo/bare/IOI-2017.svg"
+    name: "International Olympiad in Informatics"
+
+  - link: "https://open.spotify.com/user/petuhovskiy"
+    icon: "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg"
+    name: "Spotify"
+
+  - link: "https://gitlab.com/petuhovskiy"
+    icon: "https://cdn.svgporn.com/logos/gitlab.svg"
+    name: "GitLab"
+
+  - link: "mailto:apetuhovskiy@gmail.com"
+    icon: "https://cdn.svgporn.com/logos/google-gmail.svg"
+    name: "Gmail"
+
+  - link: "https://www.facebook.com/petuhovskiy"
+    icon: "https://cdn.svgporn.com/logos/facebook.svg"
+    name: "Facebook"
+
+  - link: "https://vk.com/petuhovskiy"
+    icon: "https://brand.vkforms.ru/static/media/logo_color_154.08f6e176.svg"
+    name: "VK"
+
+  - link: "https://instagram.com/petukhovskyarthur"
+    icon: "https://cdn.svgporn.com/logos/instagram-icon.svg"
+    name: "Instagram"
+
+  - link: "https://twitter.com/petuhovskiy"
+    icon: "https://cdn.svgporn.com/logos/twitter.svg"
+    name: "Twitter"
+
+  - link: "https://codeforces.com/profile/Arthur"
+    icon: ""
+    name: "Codeforces"
+
   # codeforces
   # codechef
-  spotify: "petuhovskiy"
-  gitlab: "petuhovskiy"
-  gmail: apetuhovskiy
-  facebook: "petuhovskiy"
-  vk: "petuhovskiy"
-  instagram: "petukhovskyarthur"
-  twitter: "petuhovskiy"
+  # npm
+  # dockerhub
+  # bitbucket
+  # origin
+  # steam
+  # battle.net
+  # donate with crypto
+  # discord
+  # twitch
+  # google+
+  # gitter
+  # coursera
+  # disqus
+  # facebook
+  # pinterest
+  # soundcloud
+  # tumblr
+  # vimeo
+  # youtube
+  # trello
+  # product hunt
+  # bandcamp
+  # skype
+  # whatsapp
+  # viber
+  # zoom
+  # stackoverflow
+  # kinopoisk
+  # kaggle
+  # minecraft
+
+  # use icons from https://github.com/edent/SuperTinyIcons
+
+  # built with hugo
+
 
 about:
   enable: true
