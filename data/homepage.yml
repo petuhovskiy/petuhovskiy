@@ -51,16 +51,34 @@ social:
     name: "Twitter"
 
   - link: "https://codeforces.com/profile/Arthur"
-    icon: ""
+    icon: "https://upload.wikimedia.org/wikipedia/commons/b/b1/Codeforces_logo.svg"
     name: "Codeforces"
 
-  # codeforces
-  # codechef
-  # npm
-  # dockerhub
-  # bitbucket
+  - link: "https://www.codechef.com/users/petukhovsky"
+    icon: "https://s3.amazonaws.com/codechef_shared/sites/all/themes/abessive/logo.svg"
+    name: "CodeChef"
+
+  - link: "https://www.npmjs.com/~petukhovsky"
+    icon: "https://cdn.svgporn.com/logos/npm.svg"
+    name: "npm"
+
+  - link: "https://hub.docker.com/u/arthurwow/"
+    icon: "https://cdn.svgporn.com/logos/docker-icon.svg"
+    name: "DockerHub"
+
+  - link: "https://bitbucket.org/petuhovskiy/"
+    icon: "https://cdn.svgporn.com/logos/bitbucket.svg"
+    name: "BitBucket"
+
+  - link: "https://steamcommunity.com/id/petuhovskiy/"
+    icon: "https://cdn.svgporn.com/logos/steam.svg"
+    name: "Steam"
+
+  # - link: ""
+  #   icon: ""
+  #   name: ""
+  
   # origin
-  # steam
   # battle.net
   # donate with crypto
   # discord
@@ -86,8 +104,6 @@ social:
   # kinopoisk
   # kaggle
   # minecraft
-
-  # use icons from https://github.com/edent/SuperTinyIcons
 
   # built with hugo
 

@@ -25,3 +25,8 @@ To deployed updated site, run:
 hugo -D
 ./deploy.sh
 ```
+
+### Misc notes
+
+- Tiny icons: https://github.com/edent/SuperTinyIcons
+- A lot of svg icons: https://github.com/gilbarbara/logos
